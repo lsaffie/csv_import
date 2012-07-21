@@ -1,0 +1,10 @@
+%h1 New customer
+
+= render 'form'
+
+= link_to 'Back', customers_path
+
+=form_for @customer, :html => {:multipart => true} do |f|
+  .field
+    =f.file_field :file
+    =f.submit "upload"
